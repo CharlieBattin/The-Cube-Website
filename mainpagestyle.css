@@ -1,0 +1,51 @@
+.dv-spin{
+
+width: 150px;
+height: 150px;
+animation: spin 5s ease-in-out infinite;  /* animation set */
+animation-play-state: paused;               /* ...but paused */
+}
+.dv-spin:hover{
+animation-play-state:running;  
+}
+
+.a {
+margin-top: -135px;
+position: absolute;
+animation-name: example; /* Name of Animation */
+animation-duration: 2s; /* Time of animation */
+animation-delay: 0ms; /* Animation delay */
+animation-timing-function: linear; /* Animation timing */
+animation-iteration-count: infinite;
+user-select: none; /* makes the cube not selectable */
+-moz-user-select: none; /* makes the cube not selectable */
+-webkit-user-drag: none; /* makes the cube not selectable */
+-webkit-user-select: none; /* makes the cube not selectable */
+-ms-user-select: none; /* makes the cube not selectable */
+}
+/* makes the cube small when hovered*/
+@keyframes spin {
+0% {transform: rotateX(0deg);}
+50% {transform: rotateX(70deg);}
+100% {transform: rotateX(0deg);} 
+}
+/*Makes the cube spin*/
+@keyframes example {
+0% { animation-play-state: running;transform:rotate(0deg); }
+50% { transform:rotate(180deg) }
+100% { transform:rotate(360deg) }
+}
+.column {
+float: left;
+padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+width: 100%;
+}
